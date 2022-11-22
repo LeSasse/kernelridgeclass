@@ -1,5 +1,7 @@
-# fcmodels
-A scikit-learn estimator searching through models commonly successful in the functional connectivity literature
+# kernel ridge classification
+A scikit-learn estimator for kernel ridge classification.
+It fits a [KernelRidge regression](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_ridge.KernelRidge.html#sklearn.kernel_ridge.KernelRidge)
+and then binarises the predictions.
 
 First create a virtual environment using venv or conda. 
 Make sure you upgrade pip. For example:
@@ -10,15 +12,7 @@ pip install -U pip
 ```
 To use the existing code simply install the package:
 ```sh
-git clone https://github.com/LeSasse/fcmodels.git
-cd fcmodels
+git clone https://github.com/LeSasse/kernelridgeclass.git
+cd kernelridgeclass
 pip install -e .
-```
-Also make sure you install the developer version of julearn:
-```sh
-pip install --index-url https://test.pypi.org/simple/ -U julearn --pre
-```
-You can also install the dev-requirements.txt which installs some additional packages that are useful for development:
-```sh
-pip install -r dev-requirements.txt
 ```
