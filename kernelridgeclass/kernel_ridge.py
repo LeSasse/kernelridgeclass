@@ -1,4 +1,4 @@
-"""Provide scikit-learn estimator searching through candidates."""
+"""Provide scikit-learn estimator for kernel ridge classification."""
 
 import numpy as np
 from sklearn.kernel_ridge import KernelRidge
