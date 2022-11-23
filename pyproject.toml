@@ -33,7 +33,6 @@ classifiers = [
     "Programming Language :: Python :: 3",
 ]
 dependencies = [
-    "pandas>=1.1.2",
     "scikit-learn",
     "numpy"
 ]
@@ -43,17 +42,6 @@ dynamic = ["version"]
 repository = "https://github.com/LeSasse/kernelridgeclass.git"
 
 [project.scripts]
-
-[project.optional-dependencies]
-dev = ["tox"]
-docs = [
-    "seaborn>=0.11.2,<0.12",
-    "Sphinx>=5.0.2,<5.1",
-    "sphinx-gallery>=0.10.1,<0.11",
-    "sphinx-rtd-theme>=1.0.0,<1.1",
-    "sphinx-multiversion>=0.2.4,<0.3",
-    "numpydoc>=1.4.0,<1.5",
-]
 
 ################
 # Tool configs #
