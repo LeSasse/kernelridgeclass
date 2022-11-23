@@ -22,7 +22,7 @@ class KernelRidgeClassifier(KernelRidge):
 
     def predict(self, X):
         """Implement predict."""
-        return np.where(super().predict(X) > 0.5, 0, 1)
+        return np.where(super().predict(X) < 0.5, 0, 1)
 
     def score(self, X, y, sample_weight=None):
         """Implement score."""
