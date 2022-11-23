@@ -15,7 +15,6 @@ def test_classification():
     clsf.fit(X, y)
 
     X_new, y_new = make_classification(random_state=0)
-    clsf.predict(X_new)
     clsf.score(X_new, y_new)
 
 

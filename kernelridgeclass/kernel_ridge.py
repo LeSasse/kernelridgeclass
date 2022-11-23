@@ -12,25 +12,6 @@ class KernelRidgeClassifier(KernelRidge):
     then uses 0.5 as a threshold to binarise the predictions.
     """
 
-    def __init__(
-        self,
-        alpha=1.0,
-        kernel="linear",
-        gamma=None,
-        degree=3,
-        coef0=1,
-        kernel_params=None,
-    ):
-        """Initialise class."""
-        super().__init__(
-            alpha=alpha,
-            kernel=kernel,
-            gamma=gamma,
-            degree=degree,
-            coef0=coef0,
-            kernel_params=kernel_params,
-        )
-
     def fit(self, X, y):
         """Implement fit."""
         for val in np.unique(y):
@@ -41,7 +22,7 @@ class KernelRidgeClassifier(KernelRidge):
 
     def predict(self, X):
         """Implement predict."""
-        return np.array([0 if x < 0.5 else 1 for x in super().predict(X)])
+        return np.where(super().predict(X) > 0.5, 0, 1)
 
     def score(self, X, y, sample_weight=None):
         """Implement score."""
